@@ -94,6 +94,8 @@ public class LogicTest {
         assertEquals(lastShownList, logic.getLastShownList());
         if (command.isMutating()) {
             assertEquals(addressBook, saveFile.load());
+        } else {
+            assertEquals(addressBook, expectedAddressBook);
         }
     }
 
