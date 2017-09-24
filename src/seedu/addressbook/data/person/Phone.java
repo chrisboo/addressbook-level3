@@ -38,7 +38,7 @@ public class Phone implements Printable {
 
     @Override
     public String getPrintableString() {
-        return "Phone: " + value + "\n";
+        return "Phone: " + value;
     }
 
     @Override

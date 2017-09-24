@@ -39,7 +39,7 @@ public class Email implements Printable {
 
     @Override
     public String getPrintableString() {
-        return "Email: " + value + "\n";
+        return "Email: " + value;
     }
 
     @Override

@@ -3,6 +3,7 @@ package seedu.addressbook.data.person;
 import seedu.addressbook.data.tag.UniqueTagList;
 
 import java.util.Objects;
+import java.util.StringJoiner;
 
 /**
  * Represents a Person in the address book.
@@ -37,14 +38,13 @@ public class Person implements ReadOnlyPerson {
     /**
      * Returns a concatenated version of the printable strings of each object.
      */
-    String getPrintableString(Printable... printables) {
-        String result = "";
-
+    public String getPrintableString(Printable... printables) {
+        StringJoiner sj = new StringJoiner("\n");
         for (Printable printable : printables) {
-            result += printable.getPrintableString();
+            sj.add(printable.getPrintableString());
         }
 
-        return result;
+        return sj.toString();
     }
 
     @Override

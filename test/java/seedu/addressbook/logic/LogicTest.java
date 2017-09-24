@@ -457,6 +457,15 @@ public class LogicTest {
                                 expectedList);
     }
 
+    @Test
+    public void execute_getPrintableString() throws Exception {
+        TestDataHelper helper = new TestDataHelper();
+        Person p = helper.adam();
+
+        assertEquals(p.getPrintableString(p.getEmail(), p.getPhone()),
+                     "Email: adam@gmail.com\nPhone: 111111");
+    }
+
     /**
      * A utility class to generate test data.
      */
